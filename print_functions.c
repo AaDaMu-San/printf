@@ -109,7 +109,7 @@ int print_percent(va_list ap, params_t *params)
  */
 int print_S(va_list ap, params_t *params)
 {
-	char *str = va_ arg(ap, char *);
+	char *str = va_arg(ap, char *);
 	char *hex;
 	int sum = 0;
 

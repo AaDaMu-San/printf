@@ -7,7 +7,7 @@
  */
 int (*get_specifier(char *s))(va_list ap, params_t *params)
 {
-	specifier_t specifires[] = {
+	specifier_t specifiers[] = {
 		{"c", print_char},
 		{"d", print_int},
 		{"i", print_int},
@@ -26,11 +26,11 @@ int (*get_specifier(char *s))(va_list ap, params_t *params)
 	};
 	int i = 0;
 
-	while (specifiers[i].specifiers)
+	while (specifiers[i].specifier)
 	{
 		if (*s == specifiers[i].specifier[0])
 			return (specifiers[i].f);
-		i++
+		i++;
 	}
 	return (NULL);
 }

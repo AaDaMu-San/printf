@@ -68,7 +68,7 @@ int print_char(va_list ap, params_t *params);
 int print_int(va_list ap, params_t *params);
 int print_string(va_list ap, params_t *params);
 int print_percent(va_list ap, params_t *params);
-int print_S(va_list ap, param_t *params);
+int print_S(va_list ap, params_t *params);
 
 /* number.c mod */
 char *convert(long int num, int base, int flags, params_t *params);
@@ -76,7 +76,7 @@ int print_unsigned(va_list ap, params_t *params);
 int print_address(va_list ap, params_t *params);
 
 /* specifier.c file */
-int (*get_specifer(char *s))(va_list ap, params_t *params);
+int (*get_specifier(char *s))(va_list ap, params_t *params);
 int get_print_func(char *s, va_list ap, params_t *params);
 int get_flag(char *s, params_t *params);
 int get_modifier(char *s, params_t *params);
@@ -107,6 +107,6 @@ void init_params(params_t *params, va_list ap);
 char *get_precision(char *p, params_t *params, va_list ap);
 
 /* _printf.c file */
-int _printf(const char *format. ...);
+int _printf(const char *format, ...);
 
 #endif
